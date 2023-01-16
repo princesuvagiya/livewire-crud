@@ -2,12 +2,6 @@
 
 @section('content')
 
-   <h1>Hello</h1>
+    {{ $slot }}
 
 @endsection
-
-
-
-
-</body>
-</html>

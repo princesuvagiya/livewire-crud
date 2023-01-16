@@ -13,21 +13,35 @@
 
     {{-- js --}}
 
+
+    @livewireStyles
+
    <script
         src="{{ mix('/js/app.js') }}" ></script>
+
+
 
     <title>Document</title>
 </head>
 
 
-<body>
+    <body>
 
 
+    @include('components.header')
 
-<main>
-    @yield('content')
-</main>
+    <main>
+
+        @yield('content')
 
 
-</body>
+    </main>
+
+
+    {{-- scripts --}}
+
+    @livewireScripts
+
+    </body>
+
 </html>
