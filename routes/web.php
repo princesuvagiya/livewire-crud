@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Auth::routes();
 
-    return view('dashboard');
 
-});
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login',[LoginController::class,'login']);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

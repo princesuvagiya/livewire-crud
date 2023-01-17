@@ -1,13 +1,11 @@
 // webpack.mix.js
-
 const mix = require('laravel-mix');
 
+mix.sass(`resources/sass/app.scss`, `public/css`, {}, [
 
-mix.js('resources/js/app.js', 'js')
+    require("tailwindcss"),
 
-   .sass('resources/sass/app.scss', 'css')
-
-   .setPublicPath('public');
+]);
 
 
 

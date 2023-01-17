@@ -28,7 +28,7 @@
     <body>
 
 
-    @include('components.header')
+    {{-- @include('components.header') --}}
 
     <main>
 
